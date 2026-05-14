@@ -30,8 +30,6 @@ public class Main {
                 "ABC-1234",
                 "Honda Civic",
                 "Prata",
-                LocalDateTime.of(2026, 6, 20, 9, 30),
-                LocalDateTime.of(2026, 6, 20, 12, 15),
                 "Seguro Total",
                 "AP-889900",
                 "0800-123-456");
@@ -44,7 +42,9 @@ public class Main {
                 "Mariana Souza",
                 LocalDateTime.of(2026, 6, 20, 9, 0));
 
-        TicketEstacionamento ticket = new TicketEstacionamento("TCK-1001", veiculo, vaga, false);
+        TicketEstacionamento ticket = new TicketEstacionamento("TCK-1001", veiculo, vaga, false,
+                LocalDateTime.of(2026, 6, 20, 9, 30),
+                LocalDateTime.of(2026, 6, 20, 12, 15));
         ReservaVaga reserva = new ReservaVaga(vaga, cliente);
         RegistroPagamento pagamento = new RegistroPagamento(ticket, cliente, new BigDecimal("48.5"));
         OperacaoEstacionamento operacao = new OperacaoEstacionamento();
