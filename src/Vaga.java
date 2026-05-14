@@ -7,17 +7,13 @@ public class Vaga {
     private boolean coberta;
     private boolean ocupada;
 
-    private String nomeClienteReserva;
-    private LocalDateTime horarioReserva;
 
-    public Vaga(String codigo, String setor, boolean coberta, boolean ocupada,
-                String nomeClienteReserva, LocalDateTime horarioReserva) {
+
+    public Vaga(String codigo, String setor, boolean coberta, boolean ocupada) {
         this.codigo = codigo;
         this.setor = setor;
         this.coberta = coberta;
         this.ocupada = ocupada;
-        this.nomeClienteReserva = nomeClienteReserva;
-        this.horarioReserva = horarioReserva;
     }
 
     public String getCodigo() {
@@ -34,14 +30,6 @@ public class Vaga {
 
     public boolean isOcupada() {
         return ocupada;
-    }
-
-    public String getNomeClienteReserva() {
-        return nomeClienteReserva;
-    }
-
-    public LocalDateTime getHorarioReserva() {
-        return horarioReserva;
     }
 
     public String descreverStatus() {

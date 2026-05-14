@@ -38,14 +38,15 @@ public class Main {
                 "A12",
                 "Setor Azul",
                 true,
-                true,
-                "Mariana Souza",
-                LocalDateTime.of(2026, 6, 20, 9, 0));
+                true
+        );
 
         TicketEstacionamento ticket = new TicketEstacionamento("TCK-1001", veiculo, vaga, false,
                 LocalDateTime.of(2026, 6, 20, 9, 30),
                 LocalDateTime.of(2026, 6, 20, 12, 15));
-        ReservaVaga reserva = new ReservaVaga(vaga, cliente);
+        ReservaVaga reserva = new ReservaVaga(vaga, cliente, "Mariana Souza",
+                LocalDateTime.of(2026, 6, 20, 9, 0)
+        );
         RegistroPagamento pagamento = new RegistroPagamento(ticket, cliente, new BigDecimal("48.5"));
         OperacaoEstacionamento operacao = new OperacaoEstacionamento();
         CentralClientes centralClientes = new CentralClientes();
