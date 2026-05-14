@@ -4,15 +4,20 @@ import java.time.LocalDateTime;
 public class Main {
 
     public static void main(String[] args) {
-        Estacionamento estacionamento = new Estacionamento(
-                "ParkTech Centro",
-                "12.345.678/0001-90",
+
+        Endereco endereco = new Endereco(
                 "Avenida Brasil",
                 "1500",
                 "Centro",
                 "Maringá",
                 "PR",
-                "87000-000");
+                "87000-000"
+        );
+
+        Estacionamento estacionamento = new Estacionamento(
+                "ParkTech Centro",
+                "12.345.678/0001-90",
+                endereco);
 
         Cliente cliente = new Cliente(
                 "Mariana Souza",
