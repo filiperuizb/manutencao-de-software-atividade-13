@@ -43,4 +43,20 @@ public class Vaga {
     public LocalDateTime getHorarioReserva() {
         return horarioReserva;
     }
+
+    public String descreverStatus() {
+        if (this.ocupada && this.coberta) {
+            return "ocupada e coberta";
+        }
+
+        if (this.ocupada) {
+            return "ocupada";
+        }
+
+        if (this.coberta) {
+            return "livre e coberta";
+        }
+
+        return "livre";
+    }
 }
