@@ -1,5 +1,4 @@
-import javax.xml.crypto.Data;
-import java.time.DayOfWeek;
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class TicketEstacionamento {
@@ -63,5 +62,11 @@ public class TicketEstacionamento {
 
     public LocalDateTime getDataHoraSaidaPrevista() {
         return veiculo.getDataHoraSaidaPrevista();
+    }
+
+    public long calcularMinutosPermanencia() {
+        return Duration.between(
+                getDataHoraEntrada(),
+                getDataHoraSaidaPrevista()).toMinutes();
     }
 }
