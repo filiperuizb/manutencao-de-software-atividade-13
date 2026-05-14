@@ -80,4 +80,20 @@ public class Cliente {
     public String getMetodoPagamentoPreferencial() {
         return metodoPagamentoPreferencial;
     }
+
+    public int calcularDescontoCliente(Cliente cliente) {
+        if (isMensalista() && this.pontosFidelidade >= 4000) {
+            return 20;
+        }
+
+        if (this.mesesComoCliente >= 12 && this.pontosFidelidade >= 2000) {
+            return 10;
+        }
+
+        if (this.pontosFidelidade >= 1000) {
+            return 5;
+        }
+
+        return 0;
+    }
 }
