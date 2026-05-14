@@ -35,13 +35,18 @@ public class Main {
                 true,
                 dadosCobranca);
 
+        SeguroVeiculo seguroVeiculo = new SeguroVeiculo(
+                "Seguro Total",
+                "AP-889900",
+                "0800-123-456"
+        );
+
         Veiculo veiculo = new Veiculo(
                 "ABC-1234",
                 "Honda Civic",
                 "Prata",
-                "Seguro Total",
-                "AP-889900",
-                "0800-123-456");
+                seguroVeiculo
+        );
 
         Vaga vaga = new Vaga(
                 "A12",
