@@ -81,7 +81,7 @@ public class Cliente {
         return metodoPagamentoPreferencial;
     }
 
-    public int calcularDescontoCliente(Cliente cliente) {
+    public int calcularDescontoCliente() {
         if (isMensalista() && this.pontosFidelidade >= 4000) {
             return 20;
         }

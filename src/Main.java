@@ -66,8 +66,8 @@ public class Main {
         reserva.imprimirReserva();
         System.out.println();
 
-        System.out.println("Minutos de permanência: " + operacao.calcularMinutosPermanencia(ticket));
-        System.out.println("Desconto do cliente: " + centralClientes.calcularDescontoCliente(cliente) + "%");
+        System.out.println("Minutos de permanência: " + ticket.calcularMinutosPermanencia());
+        System.out.println("Desconto do cliente: " + cliente.calcularDescontoCliente() + "%");
         System.out.println("Status da vaga: " + painelVagas.descreverStatus(vaga));
         System.out.println();
 
