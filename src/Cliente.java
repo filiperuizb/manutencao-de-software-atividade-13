@@ -7,24 +7,17 @@ public class Cliente {
     private int mesesComoCliente;
     private boolean mensalista;
 
-    private String banco;
-    private String agencia;
-    private String conta;
-    private String metodoPagamentoPreferencial;
+    private DadosCobranca dadosCobranca;
 
     public Cliente(String nome, String cpf, String telefone,
-                   int pontosFidelidade, int mesesComoCliente, boolean mensalista,
-                   String banco, String agencia, String conta, String metodoPagamentoPreferencial) {
+                   int pontosFidelidade, int mesesComoCliente, boolean mensalista, DadosCobranca dadosCobranca) {
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
         this.pontosFidelidade = pontosFidelidade;
         this.mesesComoCliente = mesesComoCliente;
         this.mensalista = mensalista;
-        this.banco = banco;
-        this.agencia = agencia;
-        this.conta = conta;
-        this.metodoPagamentoPreferencial = metodoPagamentoPreferencial;
+        this.dadosCobranca = dadosCobranca;
     }
 
     public void imprimirResumo() {
@@ -33,13 +26,9 @@ public class Cliente {
         System.out.println("Telefone: " + telefone);
         System.out.println("Pontos de fidelidade: " + pontosFidelidade);
         System.out.println("Mensalista: " + mensalista);
-        System.out.println("Cobrança: " + getDadosCobrancaFormatados());
+        System.out.println("Cobrança: " + dadosCobranca.getDadosCobrancaFormatados());
     }
 
-    public String getDadosCobrancaFormatados() {
-        return banco + " | Agência " + agencia + " | Conta " + conta
-                + " | Método preferencial: " + metodoPagamentoPreferencial;
-    }
 
     public String getNome() {
         return nome;
@@ -63,22 +52,6 @@ public class Cliente {
 
     public boolean isMensalista() {
         return mensalista;
-    }
-
-    public String getBanco() {
-        return banco;
-    }
-
-    public String getAgencia() {
-        return agencia;
-    }
-
-    public String getConta() {
-        return conta;
-    }
-
-    public String getMetodoPagamentoPreferencial() {
-        return metodoPagamentoPreferencial;
     }
 
     public int calcularDescontoCliente() {

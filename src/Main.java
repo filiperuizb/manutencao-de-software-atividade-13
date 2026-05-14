@@ -19,6 +19,13 @@ public class Main {
                 "12.345.678/0001-90",
                 endereco);
 
+        DadosCobranca dadosCobranca = new DadosCobranca(
+                "Banco Acadêmico",
+                "1234",
+                "98765-0",
+                "Pix"
+        );
+
         Cliente cliente = new Cliente(
                 "Mariana Souza",
                 "123.456.789-00",
@@ -26,10 +33,7 @@ public class Main {
                 4200,
                 18,
                 true,
-                "Banco Acadêmico",
-                "1234",
-                "98765-0",
-                "Pix");
+                dadosCobranca);
 
         Veiculo veiculo = new Veiculo(
                 "ABC-1234",
